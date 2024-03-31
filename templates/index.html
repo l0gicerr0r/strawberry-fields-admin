@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}Strawberry Fields{% endblock %}
+
+{% block content %}
+<div id="form" class="form">
+    <form action="." method="post" enctype="multipart/form-data" id="form">
+        <label class="font">Title</label><br>
+        <input type="text" id="title" name="title" class="text"><br><br>
+        <label class="font">Album</label><br>
+        <input type="text" id="album" name="album" class="text"><br><br>
+        <label class="font">Singer</label><br>
+        <input type="text" id="singer" name="singer" class="text"><br><br>
+        <label class="font">Composer</label><br>
+        <input type="text" id="composer" name="composer" class="text"><br><br>
+        <label class="font">lyricist</label><br>
+        <input type="text" id="lyricist" name="lyricist" class="text"><br><br>
+        <label class="font">Link</label><br>
+        <input type="text" id="link" name="link" class="text"><br><br>
+        <label class="font">Midi</label><br>
+        <input type="file" id="midi" class="midi" name="midi" accept=".mid"><br>
+        <input type="submit" id="submit" class="submit" value="Add">
+    </form>
+</div>
+{% endblock %}
