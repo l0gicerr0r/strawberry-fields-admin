@@ -3,9 +3,7 @@ import os
 from flask import Flask, render_template, request
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
-import utils as ut
-
-import matplotlib.pyplot as plt
+import utils
 
 load_dotenv()
 
@@ -35,7 +33,7 @@ def index():
         lyricist = request.form['lyricist']
         link = request.form['link']
 
-        melody = ut.midi_sequence()
+        melody = utils.extract_vec()
 
         data = {
             "title": title,

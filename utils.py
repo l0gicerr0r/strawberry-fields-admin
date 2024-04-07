@@ -1,7 +1,6 @@
 from mido import MidiFile
 
-def midi_sequence(path='midi.mid', sr=48000, hop_length=2048):
-    #data = file.read()
+def extract_vec(path='midi.mid', sr=48000, hop_length=2048):
     midi = MidiFile(path)
 
     melody = []
