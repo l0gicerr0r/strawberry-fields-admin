@@ -3,7 +3,7 @@ from mido import MidiFile
 def extract_vec(path='midi.mid', sr=48000, hop_length=2048):
     midi = MidiFile(path)
 
-    melody = []
+    vector = []
 
     for message in midi.play():
         if message.type == 'note_off':
@@ -11,6 +11,6 @@ def extract_vec(path='midi.mid', sr=48000, hop_length=2048):
             note = message.note
             
             for i in range(int(time * sr / hop_length)):
-                melody.append(note)
+                vector.append(note)
 
-    return melody
+    return vector

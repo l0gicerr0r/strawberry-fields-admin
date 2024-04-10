@@ -33,7 +33,7 @@ def index():
         lyricist = request.form['lyricist']
         link = request.form['link']
 
-        melody = utils.extract_vec()
+        vector = utils.extract_vec()
 
         data = {
             "title": title,
@@ -42,7 +42,7 @@ def index():
             "composer": composer,
             "lyricist": lyricist,
             "link": link,
-            "melody": melody
+            "vector": vector
         }
 
         collection.insert_one(data)
